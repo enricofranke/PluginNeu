@@ -24,7 +24,7 @@ public class onDeath implements Listener {
 
     if(event.getEntity() instanceof EnderDragon){
       Bukkit.getScheduler().cancelTasks(TheChallange.getPlugin());
-      Date date = ActionBarManager.calendar.getTime();
+      Date date = ActionBarManager.calendar.getTime(); //TODO FIX THAT
       SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
       Bukkit.broadcastMessage(ChatColor.GREEN+ChatColor.BOLD.toString()+"Ihr habt die Challange in "+format1.format(date)+" Geschafft!!");
       Bukkit.getOnlinePlayers().forEach(current -> current.setGameMode(GameMode.SPECTATOR));
