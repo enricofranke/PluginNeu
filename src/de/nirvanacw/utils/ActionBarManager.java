@@ -19,7 +19,7 @@ public class ActionBarManager {
     public static void sendActionbar(final Player player, final String message) {
         final IChatBaseComponent iChatBaseComponent = IChatBaseComponent.ChatSerializer
                 .a("{\"text\": \"" + ChatColor.translateAlternateColorCodes('&', message) + "\"}");
-        final PacketPlayOutChat packet = new PacketPlayOutChat(iChatBaseComponent, (byte) 2); //TODO change iCHATBATECOMPONENT
+        final PacketPlayOutChat packet = new PacketPlayOutChat(iChatBaseComponent); //TODO change iCHATBATECOMPONENT
         ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
     }
 
@@ -40,9 +40,12 @@ public class ActionBarManager {
     }
 
 
+    public static Calendar calendar;
+
     public static void updateTimeBar(Calendar time){
 
         Date date = time.getTime();
+        calendar = time;
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
         time.add(Calendar.SECOND, 1);
 
