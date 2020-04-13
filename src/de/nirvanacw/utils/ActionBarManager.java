@@ -31,18 +31,18 @@ public class ActionBarManager {
         now.set(Calendar.SECOND ,0);
         now.set(Calendar.DAY_OF_MONTH, 0);
         now.set(Calendar.YEAR,0);
-        now.set(Calendar.MINUTE,0);
-        now.set(Calendar.MILLISECOND, 0);
-        now.set(Calendar.HOUR, 0);
-        now.set(Calendar.HOUR_OF_DAY, 0);
-        now.set(Calendar.WEEK_OF_MONTH,0);
-        return now;
-    }
+                now.set(Calendar.MINUTE,0);
+                now.set(Calendar.MILLISECOND, 0);
+                now.set(Calendar.HOUR, 0);
+                now.set(Calendar.HOUR_OF_DAY, 0);
+                now.set(Calendar.WEEK_OF_MONTH,0);
+                return now;
+                }
 
 
-    public static Calendar calendar;
+public static Calendar calendar;
 
-    public static void updateTimeBar(Calendar time){
+public static void updateTimeBar(Calendar time){
 
         Date date = time.getTime();
         calendar = time;
@@ -51,5 +51,5 @@ public class ActionBarManager {
 
         String message = format1.format(date);
         Bukkit.getOnlinePlayers().forEach(current -> sendActionbar(current, message));
-    }
-}
+        }
+        }
