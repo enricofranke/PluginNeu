@@ -11,8 +11,7 @@ public class onquit implements Listener {
 
     @EventHandler
     public void onquit(PlayerQuitEvent event) {
-        Player player = (Player)event.getPlayer();
         event.setQuitMessage("§7[§c-§7] " + event.getPlayer().getName());
-        sbmanager.updatescoreboard(player);
+
     }
 }

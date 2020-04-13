@@ -14,6 +14,6 @@ public class onjoin implements Listener {
          Player player = (Player)event.getPlayer();
          event.setJoinMessage("§7[§a+§7] "+player.getName());
          sbmanager.setScoreboard(player);
-         sbmanager.updatescoreboard(player);
+
      }
 }

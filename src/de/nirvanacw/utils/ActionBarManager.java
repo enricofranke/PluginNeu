@@ -9,7 +9,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
-import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -23,6 +22,8 @@ public class ActionBarManager {
         final PacketPlayOutChat packet = new PacketPlayOutChat(iChatBaseComponent, (byte) 2);
         ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
     }
+
+
 
 
     public static Calendar initTime(){
@@ -39,15 +40,13 @@ public class ActionBarManager {
     }
 
 
-    public static Calendar calendar;
-
     public static void updateTimeBar(Calendar time){
-        calendar = time;
+
         Date date = time.getTime();
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
         time.add(Calendar.SECOND, 1);
 
-        String message = ChatColor.GREEN+ChatColor.BOLD.toString()+"Timer: "+ChatColor.WHITE+ChatColor.BOLD.toString()+format1.format(date);
+        String message = format1.format(date);
         Bukkit.getOnlinePlayers().forEach(current -> sendActionbar(current, message));
     }
 }

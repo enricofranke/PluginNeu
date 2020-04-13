@@ -1,6 +1,8 @@
 package de.nirvanacw.main;
 
-import de.nirvanacw.events.*;
+import de.nirvanacw.events.onPlayerMove;
+import de.nirvanacw.events.onjoin;
+import de.nirvanacw.events.onquit;
 import org.bukkit.Bukkit;
 import de.nirvanacw.commands.StartTimer;
 import org.bukkit.ChatColor;
@@ -45,10 +47,8 @@ public class TheChallange extends JavaPlugin {
     private void oninit() {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new onjoin(),this);
-        pm.registerEvents(new onquit(), this);
+        pm.registerEvents(new onquit(), this);;
         pm.registerEvents(new onPlayerMove(), this);
-        pm.registerEvents(new onDeath(), this);
-        pm.registerEvents(new onPlayerDeath(), this);
         getCommand("start").setExecutor(new StartTimer());
     }
 }

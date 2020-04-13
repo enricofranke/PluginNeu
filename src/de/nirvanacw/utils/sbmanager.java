@@ -5,9 +5,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 
-import java.text.DecimalFormat;
-import java.util.UUID;
-
 public class sbmanager {
 
 
@@ -36,8 +33,8 @@ public class sbmanager {
         o.getScore("§aSpieler:").setScore(8);
         Team sl = sb.registerNewTeam("spieler");
         sl.addEntry(ChatColor.WHITE.toString());
-        sl.setPrefix("§7➥");
-        sl.setSuffix("§f " + Bukkit.getOnlinePlayers().size() + "§8/§f" + Bukkit.getMaxPlayers());
+        sl.setPrefix("§7➥" );
+        sl.setSuffix("§f "+Bukkit.getOnlinePlayers().size() + "§8/§f" + Bukkit.getMaxPlayers());
         o.getScore(ChatColor.WHITE.toString()).setScore(7);
 
         o.getScore("§8").setScore(6);
@@ -46,13 +43,8 @@ public class sbmanager {
 
         o.getScore("§c").setScore(3);
         o.getScore("§5Twitch Prime ist kostenlos").setScore(2);
+        o.getScore("§b").setScore(1);
 
         player.setScoreboard(sb);
-    }
-    public static void updatescoreboard(Player player) {
-
-        Scoreboard board = player.getScoreboard();
-        board.getTeam("spieler").setSuffix("§f " + Bukkit.getOnlinePlayers().size() + "§8/§f" + Bukkit.getMaxPlayers());
-
     }
 }
