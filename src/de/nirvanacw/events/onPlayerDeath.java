@@ -1,5 +1,6 @@
 package de.nirvanacw.events;
 
+import de.nirvanacw.commands.StartTimer;
 import de.nirvanacw.main.TheChallange;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,6 +19,6 @@ public class onPlayerDeath implements Listener {
     Player player = event.getEntity();
     Bukkit.getOnlinePlayers().forEach(current -> current.setGameMode(GameMode.SPECTATOR));
     Bukkit.broadcastMessage(ChatColor.RED+ChatColor.BOLD.toString()+"Ihr habt Versagt wegen " +player.getName());
-    Bukkit.getScheduler().cancelTasks(TheChallange.getPlugin());
+    Bukkit.getScheduler().cancelTask(StartTimer.TimerTaskID);
   }
 }
