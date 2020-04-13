@@ -11,7 +11,10 @@ public class onquit implements Listener {
 
     @EventHandler
     public void onquit(PlayerQuitEvent event) {
+        Player player = event.getPlayer();
         event.setQuitMessage("§7[§c-§7] " + event.getPlayer().getName());
-
+        for (Player all : Bukkit.getOnlinePlayers()) {
+            sbmanager.updatescoreboard(all);
+        }
     }
 }

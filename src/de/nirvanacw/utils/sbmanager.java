@@ -12,6 +12,7 @@ public class sbmanager {
     static Scoreboard sb;
     static Objective o;
 
+    @SuppressWarnings("deprecation")
     public static void setScoreboard(Player player) {
 
         sm = Bukkit.getScoreboardManager();
@@ -46,5 +47,14 @@ public class sbmanager {
         o.getScore("§b").setScore(1);
 
         player.setScoreboard(sb);
+    }
+
+    public static void updatescoreboard(Player player) {
+        sb = sm.getNewScoreboard();
+
+        sb.getTeam("spieler").setSuffix("§f "+Bukkit.getOnlinePlayers().size() + "§8/§f" + Bukkit.getMaxPlayers());
+
+
+
     }
 }

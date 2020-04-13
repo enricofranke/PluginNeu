@@ -1,5 +1,7 @@
 package de.nirvanacw.main;
 
+import de.nirvanacw.commands.StartLava;
+import de.nirvanacw.commands.StopLava;
 import de.nirvanacw.events.onPlayerMove;
 import de.nirvanacw.events.onjoin;
 import de.nirvanacw.events.onquit;
@@ -49,6 +51,8 @@ public class TheChallange extends JavaPlugin {
         pm.registerEvents(new onjoin(),this);
         pm.registerEvents(new onquit(), this);;
         pm.registerEvents(new onPlayerMove(), this);
+        getCommand("startlava").setExecutor(new StartLava());
+        getCommand("stoplava").setExecutor(new StopLava());
         getCommand("start").setExecutor(new StartTimer());
     }
 }
