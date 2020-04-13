@@ -1,0 +1,8 @@
+name: ChallagePlugin
+author: Nirvanacw Team
+version: 1.0
+main: de.nirvanacw.main.TheChallange
+commands:
+  start:
+    description: dieser Command Startet den Timer
+    usage: /start
