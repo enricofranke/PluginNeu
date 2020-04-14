@@ -7,5 +7,13 @@ commands:
     description: dieser Command Startet die Challange
     usage: /start
   pause:
-    description: dieser Commadn Pausiert und Entpasiert die Challange
+    description: dieser Command Pausiert die Challange
     usage: /pause
+  resume:
+    description: dieser Command Führt eine Pausierte challange fort
+    usage: /resume
+  cord:
+    description: show cords
+    usage: /cord
+  startlava:
+  stoplava:

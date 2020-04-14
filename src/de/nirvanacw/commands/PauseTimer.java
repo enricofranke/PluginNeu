@@ -21,18 +21,13 @@ public class PauseTimer implements CommandExecutor {
                 TheChallange.isPaused = true;
                 TheChallange.canMove = false;
             }
-            else if (TheChallange.isPaused){
-                Bukkit.broadcastMessage(ChatColor.GOLD+ChatColor.BOLD.toString()+"Die Challange Geht weiter");
-                StartTimer.startTimer(ActionBarManager.calendar);
-                TheChallange.canMove = true;
-                TheChallange.isPaused = false;
+            if(TheChallange.isPaused){
+                Bukkit.getConsoleSender().sendMessage(TheChallange.ERROR+"Die challange ist schon Pausiert");
             }
         }
         if (TheChallange.isStarted == false){
             Bukkit.broadcastMessage(TheChallange.ERROR+"Du musst die Challange erst starten befor sie Pausiert werden kann");
         }
-
-
         return true;
     }
 }

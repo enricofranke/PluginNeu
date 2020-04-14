@@ -20,5 +20,6 @@ public class onPlayerDeath implements Listener {
     Bukkit.getOnlinePlayers().forEach(current -> current.setGameMode(GameMode.SPECTATOR));
     Bukkit.broadcastMessage(ChatColor.RED+ChatColor.BOLD.toString()+"Ihr habt Versagt wegen " +player.getName());
     Bukkit.getScheduler().cancelTask(StartTimer.TimerTaskID);
+    TheChallange.isStarted = false;
   }
 }

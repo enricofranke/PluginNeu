@@ -26,8 +26,8 @@ public class StartTimer implements CommandExecutor {
             startTimer(time);
             TheChallange.canMove = true;
             TheChallange.isStarted = true;
-            return true;
-        }else if(TheChallange.isStarted == true){
+            TheChallange.neverStartedBefore = true;
+        }else if(TheChallange.isStarted){
             Bukkit.getConsoleSender().sendMessage(TheChallange.ERROR+"Die Challange leuft Bereits");
         }else{
             Bukkit.getConsoleSender().sendMessage(TheChallange.ERROR+"Etwas ist Schiefgeleaufen");
