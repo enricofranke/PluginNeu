@@ -20,8 +20,8 @@ public class TheChallange extends JavaPlugin {
     public static boolean canMove = false;
     public static boolean isStarted = false;
     public static boolean neverStartedBefore =false;
-    public static String prefix = ChatColor.GOLD+"[System] :";
-    public static String ERROR = ChatColor.RED+"[EROOR] :";
+    public static String prefix = ChatColor.GOLD+"[System]: ";
+    public static String ERROR = ChatColor.RED+"[EROOR]: ";
 
 
     public static TheChallange plugin;
