@@ -14,8 +14,5 @@ public class onjoin implements Listener {
          Player player = event.getPlayer();
          event.setJoinMessage("§7[§a+§7] "+player.getName());
          sbmanager.setScoreboard(player);
-            for (Player all : Bukkit.getOnlinePlayers()) {
-                sbmanager.updatescoreboard(all);
-            }
      }
 }

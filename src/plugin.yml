@@ -4,5 +4,16 @@ version: 1.0
 main: de.nirvanacw.main.TheChallange
 commands:
   start:
-    description: dieser Command Startet den Timer
+    description: dieser Command Startet die Challange
     usage: /start
+  pause:
+    description: dieser Command Pausiert die Challange
+    usage: /pause
+  resume:
+    description: dieser Command Führt eine Pausierte challange fort
+    usage: /resume
+  cord:
+    description: show cords
+    usage: /cord
+  startlava:
+  stoplava:

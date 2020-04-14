@@ -2,6 +2,8 @@ package de.nirvanacw.utils;
 
 
 import de.nirvanacw.main.TheChallange;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.minecraft.server.v1_14_R1.IChatBaseComponent;
 import net.minecraft.server.v1_14_R1.PacketPlayOutChat;
 import org.bukkit.Bukkit;
@@ -16,14 +18,10 @@ import java.util.Date;
 public class ActionBarManager {
 
 
+    @SuppressWarnings("deprecation")
     public static void sendActionbar(final Player player, final String message) {
-        final IChatBaseComponent iChatBaseComponent = IChatBaseComponent.ChatSerializer
-                .a("{\"text\": \"" + ChatColor.translateAlternateColorCodes('&', message) + "\"}");
-        final PacketPlayOutChat packet = new PacketPlayOutChat(iChatBaseComponent); //TODO change iCHATBATECOMPONENT
-        ((CraftPlayer) player).getHandle().playerConnection.sendPacket(packet);
+        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(message));
     }
-
-
 
 
     public static Calendar initTime(){
@@ -48,8 +46,7 @@ public static void updateTimeBar(Calendar time){
         calendar = time;
         SimpleDateFormat format1 = new SimpleDateFormat("HH:mm:ss");
         time.add(Calendar.SECOND, 1);
-
-        String message = format1.format(date);
+        String message = ChatColor.GREEN+ChatColor.BOLD.toString()+"Timer:"+ChatColor.WHITE+ChatColor.BOLD.toString()+format1.format(date);
         Bukkit.getOnlinePlayers().forEach(current -> sendActionbar(current, message));
         }
         }

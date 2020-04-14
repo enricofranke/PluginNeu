@@ -33,7 +33,7 @@ public class StartLava implements CommandExecutor {
                 Block block = all.getLocation().subtract(0, 1, 0).getBlock();
                 block.setType(Material.LAVA);
             }
-        }, 0L, 20L);
+        }, 0L, 10L);
 
 
     }
