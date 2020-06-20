@@ -18,7 +18,7 @@ public class onPlayerMove implements Listener {
             event.setCancelled(true);
         }
         if(TheChallange.canMove == true){
-            event.setCancelled(false);
+
         }
 
     }

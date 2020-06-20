@@ -2,6 +2,7 @@ package de.nirvanacw.events;
 
 import de.nirvanacw.utils.sbmanager;
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,8 +12,7 @@ public class onquit implements Listener {
 
     @EventHandler
     public void onquit(PlayerQuitEvent event) {
-        Player player = (Player)event.getPlayer();
+        Player player = event.getPlayer();
         event.setQuitMessage("§7[§c-§7] " + event.getPlayer().getName());
-        sbmanager.updatescoreboard(player);
     }
 }
