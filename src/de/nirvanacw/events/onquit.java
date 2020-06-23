@@ -1,8 +1,5 @@
-package de.nirvanacw.events;
+package src.de.nirvanacw.events;
 
-import de.nirvanacw.utils.sbmanager;
-import org.bukkit.Bukkit;
-import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

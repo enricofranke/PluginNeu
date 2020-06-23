@@ -1,9 +1,10 @@
-package de.nirvanacw.events;
+package src.de.nirvanacw.events;
 
-import de.nirvanacw.main.TheChallange;
+
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import src.de.nirvanacw.main.TheChallange;
 
 public class onEntityDamage implements Listener {
 

@@ -1,13 +1,12 @@
-package de.nirvanacw.main;
+package src.de.nirvanacw.main;
 
-import de.nirvanacw.commands.*;
-import de.nirvanacw.events.*;
-import net.minecraft.server.v1_14_R1.PacketPlayInAbilities;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import src.de.nirvanacw.commands.*;
+import src.de.nirvanacw.events.*;
 
 import java.util.ArrayList;
 

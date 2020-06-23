@@ -1,4 +1,4 @@
-package de.nirvanacw.commands;
+package src.de.nirvanacw.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -29,7 +29,7 @@ public class Cords implements CommandExecutor {
                 double y = player.getLocation().getY();
                 double z = player.getLocation().getZ();
                 DecimalFormat format = new DecimalFormat("#.##");
-                String add = (ChatColor.GOLD+ args[0] +ChatColor.WHITE+" || "+ChatColor.RED+" x: "+format.format(x)+ChatColor.WHITE+" || "+ ChatColor.GREEN+" y: " + format.format(y) +ChatColor.WHITE+" || "+ChatColor.BLUE+" z: " + format.format(z));
+                String add = ("§7[§9Cords§7] "+ChatColor.GOLD+ args[0] +ChatColor.WHITE+" | "+ChatColor.RED+" x: "+format.format(x)+ChatColor.WHITE+" | "+ ChatColor.GREEN+" y: " + format.format(y) +ChatColor.WHITE+" | "+ChatColor.BLUE+" z: " + format.format(z));
                 Bukkit.broadcastMessage(add);
                 places.add(add);
             }

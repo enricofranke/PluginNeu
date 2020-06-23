@@ -1,17 +1,16 @@
-package de.nirvanacw.events;
+package src.de.nirvanacw.events;
 
-import de.nirvanacw.commands.StartTimer;
-import de.nirvanacw.main.TheChallange;
-import de.nirvanacw.utils.ActionBarManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.EnderDragon;
+
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.Sheep;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
+import src.de.nirvanacw.commands.StartTimer;
+import src.de.nirvanacw.utils.ActionBarManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

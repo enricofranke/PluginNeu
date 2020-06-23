@@ -1,11 +1,11 @@
-package de.nirvanacw.commands;
+package src.de.nirvanacw.commands;
 
-import de.nirvanacw.main.TheChallange;
-import org.bukkit.Bukkit;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import src.de.nirvanacw.main.TheChallange;
 
 public class StopLava implements CommandExecutor {
 
